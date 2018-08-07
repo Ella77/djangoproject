@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/superlists$Unittests_for_functional_tests_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later.coverage" NAME="Unittests for superlists/superlists/functional_tests.py Coverage Results" MODIFIED="1533604276627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/superlists" />
+    <SUITE FILE_PATH="coverage/superlists$Unittests_for_functional_tests_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later.coverage" NAME="Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later Coverage Results" MODIFIED="1533604835359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/superlists" />
     <SUITE FILE_PATH="coverage/superlists$Unittests_for_functional_tests_NewVisitorTest.coverage" NAME="Unittests for functional_tests.NewVisitorTest Coverage Results" MODIFIED="1533604141333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/superlists" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -42,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="307" />
-          <entry key="py" value="2897" />
+          <entry key="py" value="3168" />
           <entry key="txt" value="26" />
         </counts>
       </usages-collector>
@@ -50,7 +50,7 @@
         <counts>
           <entry key="HTML" value="307" />
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="2897" />
+          <entry key="Python" value="3168" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -61,12 +61,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/superlists/functional_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+            <state relative-caret-position="333">
+              <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1533604141000" expanded="true" signature="947:956" ph="..." />
-                <marker date="1533604141000" expanded="true" signature="1845:2125" ph="..." />
+                <marker date="1533604603000" expanded="true" signature="676:860" ph="..." />
+                <marker date="1533604603000" expanded="true" signature="1178:1187" ph="..." />
+                <marker date="1533604603000" expanded="true" signature="2002:2282" ph="..." />
               </folding>
             </state>
           </provider>
@@ -253,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for superlists/superlists/functional_tests.py">
+  <component name="RunManager" selected="Python tests.Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later">
     <configuration name="home.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/superlists/lists/templates/home.html">
       <method v="2" />
     </configuration>
@@ -366,9 +367,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
         <item itemvalue="Python tests.Unittests for superlists/superlists/functional_tests.py" />
         <item itemvalue="Python tests.Unittests for functional_tests.NewVisitorTest" />
-        <item itemvalue="Python tests.Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
         <item itemvalue="JavaScript Debug.home.html" />
         <item itemvalue="Python tests.Unittests for superlists.functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" />
       </list>
@@ -403,12 +404,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_functional_tests_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later - 2018.08.06 at 18h 40m 24s.xml">
-      <configuration name="Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_functional_tests_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later - 2018.08.06 at 18h 42m 33s.xml">
-      <configuration name="Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_functional_tests_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later - 2018.08.06 at 18h 48m 11s.xml">
       <configuration name="Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" configurationId="tests" />
     </history-entry>
@@ -432,6 +427,12 @@
     </history-entry>
     <history-entry file="Unittests_for_functional_tests_NewVisitorTest_test_can_start_a_list_and_retrieve_it_later - 2018.08.07 at 10h 08m 08s.xml">
       <configuration name="Unittests for functional_tests.NewVisitorTest.test_can_start_a_list_and_retrieve_it_later" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_functional_tests_NewVisitorTest - 2018.08.07 at 10h 09m 05s.xml">
+      <configuration name="Unittests for functional_tests.NewVisitorTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_superlists_superlists_functional_tests_py - 2018.08.07 at 10h 11m 22s.xml">
+      <configuration name="Unittests for superlists/superlists/functional_tests.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -547,12 +548,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/superlists/functional_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        <state relative-caret-position="333">
+          <caret line="43" column="8" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <marker date="1533604141000" expanded="true" signature="947:956" ph="..." />
-            <marker date="1533604141000" expanded="true" signature="1845:2125" ph="..." />
+            <marker date="1533604603000" expanded="true" signature="676:860" ph="..." />
+            <marker date="1533604603000" expanded="true" signature="1178:1187" ph="..." />
+            <marker date="1533604603000" expanded="true" signature="2002:2282" ph="..." />
           </folding>
         </state>
       </provider>
