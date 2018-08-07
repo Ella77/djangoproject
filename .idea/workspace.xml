@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ecc595-697a-4808-98c8-9020af4ee7b9" name="Default Changelist" comment=" reboot django">
-      <change beforePath="$PROJECT_DIR$/lists/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/lists/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lists/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/lists/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lists/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lists/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lists/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/lists/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lists/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lists/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superlists/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/superlists/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +48,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="453" />
-          <entry key="py" value="9072" />
+          <entry key="py" value="9483" />
           <entry key="txt" value="26" />
         </counts>
       </usages-collector>
@@ -59,7 +56,7 @@
         <counts>
           <entry key="HTML" value="453" />
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="9072" />
+          <entry key="Python" value="9483" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -70,13 +67,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lists/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="285">
+              <caret line="19" column="110" lean-forward="true" selection-start-line="19" selection-start-column="110" selection-end-line="19" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lists/templates/list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -111,27 +108,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lists/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="34" column="51" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="34" selection-end-column="51" />
+            <state relative-caret-position="570">
+              <caret line="38" column="42" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="42" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1533626608000" expanded="true" signature="418:423" ph="..." />
-                <marker date="1533626608000" expanded="true" signature="418:427" ph="..." />
-                <marker date="1533626608000" expanded="true" signature="932:937" ph="..." />
-                <marker date="1533626608000" expanded="true" signature="2377:2515" ph="..." />
-                <marker date="1533626608000" expanded="true" signature="2510:2511" ph="..." />
+                <marker date="1533627377000" expanded="true" signature="474:479" ph="..." />
+                <marker date="1533627377000" expanded="true" signature="474:483" ph="..." />
+                <marker date="1533627377000" expanded="true" signature="1247:1252" ph="..." />
+                <marker date="1533627377000" expanded="true" signature="2692:2830" ph="..." />
+                <marker date="1533627377000" expanded="true" signature="2825:2826" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lists/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <marker date="1533607075000" expanded="true" signature="82:87" ph="..." />
+                <marker date="1533627450000" expanded="true" signature="123:128" ph="..." />
+                <marker date="1533627450000" expanded="true" signature="213:214" ph="..." />
               </folding>
             </state>
           </provider>
@@ -171,14 +169,14 @@
         <option value="$PROJECT_DIR$/superlists/__init__.py" />
         <option value="$PROJECT_DIR$/functional_tests.py" />
         <option value="$PROJECT_DIR$/superlists/settings.py" />
-        <option value="$PROJECT_DIR$/lists/models.py" />
         <option value="$PROJECT_DIR$/superlists/functional_tests.py" />
         <option value="$PROJECT_DIR$/functional_tests/tests.py" />
         <option value="$PROJECT_DIR$/superlists/urls.py" />
         <option value="$PROJECT_DIR$/lists/views.py" />
-        <option value="$PROJECT_DIR$/lists/tests.py" />
-        <option value="$PROJECT_DIR$/lists/templates/home.html" />
         <option value="$PROJECT_DIR$/lists/templates/list.html" />
+        <option value="$PROJECT_DIR$/lists/templates/home.html" />
+        <option value="$PROJECT_DIR$/lists/tests.py" />
+        <option value="$PROJECT_DIR$/lists/models.py" />
       </list>
     </option>
   </component>
@@ -555,16 +553,6 @@
     <entry file="file://$PROJECT_DIR$/lists/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lists/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <marker date="1533607075000" expanded="true" signature="82:87" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lists/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -634,32 +622,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lists/tests.py">
+    <entry file="file://$PROJECT_DIR$/lists/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="34" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1533626608000" expanded="true" signature="418:423" ph="..." />
-            <marker date="1533626608000" expanded="true" signature="418:427" ph="..." />
-            <marker date="1533626608000" expanded="true" signature="932:937" ph="..." />
-            <marker date="1533626608000" expanded="true" signature="2377:2515" ph="..." />
-            <marker date="1533626608000" expanded="true" signature="2510:2511" ph="..." />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lists/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="285">
+          <caret line="19" column="110" lean-forward="true" selection-start-line="19" selection-start-column="110" selection-end-line="19" selection-end-column="110" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lists/templates/list.html">
+    <entry file="file://$PROJECT_DIR$/lists/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="570">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1533627377000" expanded="true" signature="474:479" ph="..." />
+            <marker date="1533627377000" expanded="true" signature="474:483" ph="..." />
+            <marker date="1533627377000" expanded="true" signature="1247:1252" ph="..." />
+            <marker date="1533627377000" expanded="true" signature="2692:2830" ph="..." />
+            <marker date="1533627377000" expanded="true" signature="2825:2826" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lists/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <marker date="1533627450000" expanded="true" signature="123:128" ph="..." />
+            <marker date="1533627450000" expanded="true" signature="213:214" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
