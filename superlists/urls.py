@@ -16,11 +16,13 @@ from django.conf.urls import url
 # from django.contrib import admin
 from django.urls import path
 
-from lists import views
+from lists.views import home_page, view_list
 
 
 # from .lists import views
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home_page, name='home'),
+    url(r'^$', home_page, name='home'),
+    url(r'^lists/the-only-list-in-the-world/$', view_list,
+        name= 'view_list'),
 ]
