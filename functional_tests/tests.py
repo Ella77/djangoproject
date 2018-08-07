@@ -22,6 +22,18 @@ class NewVisitorTest(LiveServerTestCase):
             staleness_of(old_page)
         )
 
+    def test_layout_and_styling(self):
+        self.browser.get(self.live_server_url)
+        self.browser.set_window_size(1024, 768)
+
+
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox.send_keys('testing\n')
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=10
+        )
 
     # @classmethod
     # def setUpClass(cls):
@@ -55,6 +67,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn(row_text, [row.text for row in rows])
 
     #목록 저장하고 있는지 궁금
+
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         self.browser.get(self.live_server_url)
@@ -127,6 +140,10 @@ class NewVisitorTest(LiveServerTestCase):
         #
         # self.stale_aware_for_action(check_for_second_item)
         # self.stale_aware_for_action(check_for_first_item)
+
+
+
+
         self.fail('Finish the Test!')
 
 
