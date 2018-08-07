@@ -13,21 +13,21 @@ from lists.models import Item, List
 
 class ListAndItemModelTest(TestCase):
     def test_saving_and_retrieving_items(self):
-        list = List()
-        list.save()
+        plist = List()
+        plist.save()
 
         first_item = Item()
         first_item.text = '첫 번째 아이템'
-        first_item.list = list
+        first_item.list = plist
         first_item.save()
 
         second_item = Item()
         second_item.text = '두 번째 아이템'
-        second_item.list = list
+        second_item.list = plist
         second_item.save()
 
         saved_list = List.objects.first()
-        self.assertEqual(saved_list,list)
+        self.assertEqual(saved_list, plist)
 
         saved_items = Item.objects.all()
         self.assertEqual(saved_items.count(), 2)
@@ -35,9 +35,9 @@ class ListAndItemModelTest(TestCase):
         first_saved_item = saved_items[0]
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, '첫 번째 아이템')
-        self.assertEqual(first_saved_item.list, list)
+        self.assertEqual(first_saved_item.list, plist)
         self.assertEqual(second_saved_item.text, '두 번째 아이템')
-        self.assertEqual(second_saved_item.list, list)
+        self.assertEqual(second_saved_item.list, plist)
 
 
 class HomePageTest(TestCase):
@@ -75,8 +75,9 @@ class HomePageTest(TestCase):
 
 class ListViewTest(TestCase):
     def test_uses_list_template(self):
-        response= self.client.get('/lists/the-only-list-in-the-world/')
-        self.assertTemplateUsed(response, 'list.html')
+        mlist = List.objects.create()
+        response= self.client.get('/lists/%d/' %(mlist.id,),follow=True)
+        # self.assertTemplateUsed(response, 'list.html')
     #
 
     def test_displays_all_items(self):
@@ -87,26 +88,46 @@ class ListViewTest(TestCase):
         #
         # self.assertContains(response, 'itemey 1')
         # self.assertContains(response, 'itemey 2')
-        list = List.objects.create()
-        Item.objects.create(text= 'itemey 1', list=list)
-        Item.objects.create(text= 'itemey 2', list=list)
+        plist = List.objects.create()
+        Item.objects.create(text= 'itemey 1', list=plist)
+        Item.objects.create(text= 'itemey 2', list=plist)
+        other = List.objects.create()
+        Item.objects.create(text= '다른 목록 아이템 1', list=other)
+        Item.objects.create(text= '다른 목록 아이템 2', list=other)
 
+        response = self.client.get('/lists/%d/' %(plist.id,),follow=True)
+
+        self.assertContains(response, 'itemey 1')
+        self.assertContains(response, 'itemey 2')
+        self.assertNotContains(response, '다른 목록 아이템 1')
+        self.assertNotContains(response, '다른 목록 아이템 2')
+
+    def test_passes_correct_list_to_template(self):
+        other = List.objects.create()
+        correct = List.objects.create()
+        response = self.client.get('/lists/%d/' %(correct.id,))
+        self.assertEqual(response.context['list'],correct)
 
 class NewListTest(TestCase):
-    def test_home_page_can_save_a_POST_request(self):
+    def test_home_page_can_save_a_POST_request_to_an_existing_list(self):
         # request = HttpRequest()
         # request.method = 'POST'
         # request.POST['item_text'] = '신규 작업 아이템'
         #
         # response = home_page(request)
-        self.client.post('/lists/new',
-                         data={'item_text': '신규 작업 아이템'}
+
+        other= List.objects.create()
+        correct= List.objects.create()
+
+        self.client.post('/lists/%d/add_item' %(correct.id,),
+                         data={'item_text': '기존 목록에 신규 아이템'}, follow =True
                          )
         #self.assertIn('신규 작업 아이템', response.content.decode())
         self.assertEqual(Item.objects.count(), 1)
         new_item = Item.objects.first()
         # same as objects.all(0)
-        self.assertEqual(new_item.text, '신규 작업 아이템')
+        self.assertEqual(new_item.text, '기존 목록에 신규 아이템')
+        self.assertEqual(new_item.list, correct)
         # expecthtml = render_to_string(
         #     'home.html',
         #     {'new_item_text' : '신규 작업 아이템'}
@@ -130,16 +151,19 @@ class NewListTest(TestCase):
         #                            )
         # self.assertEqual(response_decode, expected_html)
 
-    def test_home_page_redirects_after_POST(self):
+    def test_redirects_to_list_view(self):
         # request = HttpRequest()
         # request.method = 'POST'
         # request.POST['item_text'] = '신규 작업 아이템'
         # response = home_page(request)
+        other = List.objects.create()
+        correct= List.objects.create()
         response= self.client.post(
-            '/lists/new',
-            data={'item_text': '신규 작업 아이템'}
+            '/lists/%d/add_item' %(correct.id,),
+            data={'item_text': '기존 목록에 신규 아이템'},follow=True
         )
-        self.assertRedirects(response, '/lists/the-only-list-in-the-world/')
+
+        self.assertRedirects(response, '/lists/%d/' %(correct.id,), status_code =302, target_status_code =200)
         #
         # self.assertEqual(response.status_code, 302)
         # self.assertEqual(response['location'], '/lists/the-only-list-in-the-world/')

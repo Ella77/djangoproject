@@ -11,10 +11,10 @@ def home_page(request):
     #     return HttpResponse(request.POST['item_text'])
     # return render(request,'home.html')
 
-    #     if request.method == 'POST':
-    #         new_item_text = request.POST['item_text']
-    #         Item.objects.create(text=new_item_text)
-    #         return redirect('/lists/the-only-list-in-the-world/')
+        # if request.method == 'POST':
+        #     new_item_text = request.POST['item_text']
+        #     Item.objects.create(text=new_item_text)
+        #     return redirect('/lists/the-only-list-in-the-world/')
 
         #create not requiring saving
     # else :
@@ -28,12 +28,18 @@ def home_page(request):
     # })\
 
 
-def view_list(request):
-    items = Item.objects.all()
-    return render(request, 'list.html', {'items': items})
+def view_list(request, list_id):
+    plist = List.objects.get(id=list_id)
+    # items = Item.objects.filter(list=plist)
+    return render(request, 'list.html', {'list': plist})
 
 
 def new_list(request):
-    list = List.objects.create()
-    Item.objects.create(text=request.POST['item_text'], list=list)
-    return redirect('/lists/the-only-list-in-the-world/')
+    plist = List.objects.create()
+    Item.objects.create(text=request.POST['item_text'], list=plist)
+    return redirect('/lists/%d' % (plist.id,),follow=True)
+
+def add_item(request,list_id):
+    plist = List.objects.get(id=list_id)
+    Item.objects.create(text=request.POST['item_text'], list=plist)
+    return redirect('/lists/%d' % (plist.id,), follow=True)
