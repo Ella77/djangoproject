@@ -31,15 +31,23 @@ def home_page(request):
 def view_list(request, list_id):
     plist = List.objects.get(id=list_id)
     # items = Item.objects.filter(list=plist)
+    # except ValueError :
+    #     plist.delete()
+    # error = "You can't have an empty list item"
+
     return render(request, 'list.html', {'list': plist})
+    # except ValidationError :
+    #     list.delete()
+    #     error = "You can't have an empty list item"
+    #     return render (request, 'home.html', {"error": error})
 
 
 def new_list(request):
     plist = List.objects.create()
     Item.objects.create(text=request.POST['item_text'], list=plist)
-    return redirect('/lists/%d' % (plist.id,),follow=True)
+    return redirect('/lists/%d/' % (plist.id,),follow=True)
 
 def add_item(request,list_id):
     plist = List.objects.get(id=list_id)
     Item.objects.create(text=request.POST['item_text'], list=plist)
-    return redirect('/lists/%d' % (plist.id,), follow=True)
+    return redirect('/lists/%d/' % (plist.id,), follow=True)

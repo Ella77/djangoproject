@@ -22,19 +22,7 @@ class NewVisitorTest(LiveServerTestCase):
             staleness_of(old_page)
         )
 
-    def test_layout_and_styling(self):
-        self.browser.get(self.live_server_url)
-        self.browser.set_window_size(1024, 768)
-
-
-        inputbox = self.browser.find_element_by_id('id_new_item')
-        inputbox.send_keys('testing\n')
-        self.assertAlmostEqual(
-            inputbox.location['x'] + inputbox.size['width'] / 2,
-            512,
-            delta=10
-        )
-
+  , 7
     # @classmethod
     # def setUpClass(cls):
     #     for arg in sys.argv :
@@ -71,9 +59,9 @@ class NewVisitorTest(LiveServerTestCase):
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         self.browser.get(self.live_server_url)
-        # self.assertIn('To-Do', self.browser.title)
-        # header_text = self.browser.find_element_by_tag_name('h1').text
-        # self.assertIn('To-Do', header_text)
+        self.assertIn('To-Do', self.browser.title)
+        header_text = self.browser.find_element_by_tag_name('h1').text
+        self.assertIn('To-Do', header_text)
 
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertEqual(
@@ -83,8 +71,8 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys('공작 깃털 사기')
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
-        with self.wait_for_page_load(timeout=1):
-            self.check_for_row_in_list_table('1: 공작 깃털 사기')
+        # with self.wait_for_page_load(timeout=1):
+        self.check_for_row_in_list_table('1: 공작 깃털 사기')
         edith_list_url = self.browser.current_url
         self.assertRegex(edith_list_url, '/lists/.+')
 
@@ -92,9 +80,9 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys('깃털 모아서 날기')
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
-        with self.wait_for_page_load(timeout=1):
-            self.check_for_row_in_list_table('1: 공작 깃털 사기')
-            self.check_for_row_in_list_table('2: 깃털 모아서 날기')
+        # with self.wait_for_page_load(timeout=1):
+        self.check_for_row_in_list_table('1: 공작 깃털 사기')
+        self.check_for_row_in_list_table('2: 깃털 모아서 날기')
 
         self.browser.quit()
         self.browser = webdriver.Firefox(executable_path='/Users/soojin/Downloads/geckodriver')
@@ -106,9 +94,11 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('우유 사기')
         inputbox.send_keys(Keys.ENTER)
+        time.sleep(1)
+        self.check_for_row_in_list_table('1: 우유 사기')
 
         francis_list_url = self.browser.current_url
-        self.assertRegex(francis_list_url, '/lists/')
+        self.assertRegex(francis_list_url, '/lists/.+')
         self.assertNotEqual(francis_list_url, edith_list_url)
 
         page_text = self.browser.find_element_by_tag_name('body').text
@@ -142,9 +132,9 @@ class NewVisitorTest(LiveServerTestCase):
         # self.stale_aware_for_action(check_for_first_item)
 
 
-
-
-        self.fail('Finish the Test!')
+        #
+        #
+        # self.fail('Finish the Test!')
 
 
 
