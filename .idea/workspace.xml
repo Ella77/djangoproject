@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ecc595-697a-4808-98c8-9020af4ee7b9" name="Default Changelist" comment=" reboot django">
-      <change beforePath="$PROJECT_DIR$/functional_tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/functional_tests/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lists/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/lists/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="62ecc595-697a-4808-98c8-9020af4ee7b9" name="Default Changelist" comment=" reboot django" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,8 +157,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functional_tests/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="112" column="12" lean-forward="true" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+            <state relative-caret-position="413">
+              <caret line="121" column="72" lean-forward="true" selection-start-line="121" selection-start-column="72" selection-end-line="121" selection-end-column="72" />
               <folding>
                 <element signature="e#45#116#0" expanded="true" />
               </folding>
@@ -511,6 +507,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1896" y="23" width="1680" height="977" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -757,8 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functional_tests/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="112" column="12" lean-forward="true" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+        <state relative-caret-position="413">
+          <caret line="121" column="72" lean-forward="true" selection-start-line="121" selection-start-column="72" selection-end-line="121" selection-end-column="72" />
           <folding>
             <element signature="e#45#116#0" expanded="true" />
           </folding>
