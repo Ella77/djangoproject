@@ -14,7 +14,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 # from django.contrib import admin
-# from django.urls import path
+
 
 from lists.views import home_page, view_list, new_list, add_item
 
